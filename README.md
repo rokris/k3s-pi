@@ -7,14 +7,13 @@ A computer with ssh enabled
 A Raspberry Pi 3 or 4
 A MircroSD card (8Go min)
 A Wi-Fi connection
-Install the OS for your Raspberry Pi
 
 First, you need to install the OS on your Raspberry Pi. 
 
 On your computer, insert the MicroSD card, to install Raspbian OS on it.
 You need first to download Raspberry Pi Imager 
 Download Raspberry PI OS Lite 64 (Bullseye).img
-Release 04.04.2022 (For PI 3/4/400) (aarch64)
+Release 04.04.2022 (For PI 3/4/400)
 
 Launch Raspberry Pi Imager, then click on “Select OS” and select Raspberry Pi OS (64-bit) you just downloaded.
 
