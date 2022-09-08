@@ -21,6 +21,7 @@ Press Cmd+Shift+X (on Mac) or Ctrl+Shift+X (on Windows) to get to the Advanced o
 Enable SSH and WiFi.
 
 SSH into Raspberry Pi
+
 sudo apt-get update && sudo apt-get upgrade -y
 sudo reboot
 nano ~/.bashrc
