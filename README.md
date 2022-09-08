@@ -22,9 +22,9 @@ Enable SSH and WiFi.
 
 SSH into Raspberry Pi
 
-sudo apt-get update && sudo apt-get upgrade -y
-sudo reboot
-nano ~/.bashrc
+#sudo apt-get update && sudo apt-get upgrade -y
+#sudo reboot
+#nano ~/.bashrc
 - alias ll='ls -alF'
 sudo apt install avahi-daemon git -y
 sudo raspi-config # Turn off Autologin / Console
