@@ -5,7 +5,7 @@ In order to perform this operation, you will need the following equipments:
 
 A computer with ssh enabled
 A Raspberry Pi 3 or 4
-A MircroSD card (8Go min)
+A MircroSD card (8GB min)
 A Wi-Fi connection
 
 First, you need to install the OS on your Raspberry Pi. 
