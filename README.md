@@ -27,9 +27,10 @@ SSH into Raspberry Pi
 - nano ~/.bashrc
 - alias ll='ls -alF'
 - sudo apt install avahi-daemon git -y
-- sudo raspi-config # Turn off Autologin / Console
 - sudo nano /boot/cmdline.txt
 In file /boot/cmdline.txt add cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1 into the end of the file.
+Turn off Autologin / Console
+- sudo raspi-config
 - Select "System option"
 - Select "Boot Auto Login"
 - Select "Console"
