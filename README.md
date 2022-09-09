@@ -50,4 +50,7 @@ To get the token value use this command:
 sudo cat /var/lib/rancher/k3s/server/token
 
 curl -sfL https://get.k3s.io | K3S_URL=https://<server>:6443 K3S_TOKEN=<token> sh -
+  
+K3s config information for Remote clients is stored at master node.
+- sudo cat /etc/racher/k3s/k3s.yaml
 
