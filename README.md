@@ -23,14 +23,14 @@ Enable SSH and WiFi.
 
 SSH into Raspberry Pi
 
-`$ sudo apt update && sudo apt upgrade -y`\
-`$ sudo reboot`\
+`$ sudo apt update && sudo apt upgrade -y`<br>
+`$ sudo reboot`<br>
 `$ nano ~/.bashrc`
 
 Add following to the file:
 > alias ll='ls -alF'
 
-`$ sudo apt install avahi-daemon git -y`\
+`$ sudo apt install avahi-daemon git -y`<br>
 `$ sudo nano /boot/cmdline.txt`
 
 Add following to the end of the file:
@@ -41,17 +41,17 @@ Turn off Autologin / Console
 
 `$ sudo raspi-config`
 
-> Select "System option"\
-> Select "Boot Auto Login"\
-> Select "Console"\
+> Select "System option"<br>
+> Select "Boot Auto Login"<br>
+> Select "Console"<br>
 > Reboot (Yes)
 
 ---
 ## Prep for K3s:
 
-`$ sudo iptables -F`\
-`$ sudo update-alternatives --set iptables /usr/sbin/iptables-legacy`\
-`$ sudo update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy`\
+`$ sudo iptables -F`<br>
+`$ sudo update-alternatives --set iptables /usr/sbin/iptables-legacy`<br>
+`$ sudo update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy`<br>
 `$ sudo reboot`
 
 ---
@@ -61,7 +61,7 @@ Turn off Autologin / Console
 
 And that’s it! You have a Kubernetes cluster running! You can check it with the command:
 
-`$ kubectl get all -A`\
+`$ kubectl get all -A`<br>
 `$ kubectl get pods -A`
 
 When all is created and look good...
