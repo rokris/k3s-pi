@@ -36,8 +36,18 @@ Turn off Autologin / Console
 - Select "Console"
 - Reboot
 
+Prep for K3s:
+sudo iptables -F
+sudo update-alternatives --set iptables /usr/sbin/iptables-legacy
+sudo update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy
+sudo reboot
+
 Then install K3S:
 - curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644
+And that’s it! You have a Kubernetes cluster running! You can check it with the command:
+- kubectl get all -A
+- kubectl get pods -A
+When all is created and look good...
 - sudo reboot
 
 And that’s it! You have a Kubernetes cluster running! You can check it with the command:
