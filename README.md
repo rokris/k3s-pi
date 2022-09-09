@@ -22,19 +22,18 @@ Enable SSH and WiFi.
 
 SSH into Raspberry Pi
 
-- sudo apt-get update && sudo apt-get upgrade -y
+- sudo apt update && sudo apt upgrade -y
 - sudo reboot
 - nano ~/.bashrc
 - alias ll='ls -alF'
 - sudo apt install avahi-daemon git -y
 - sudo raspi-config # Turn off Autologin / Console
+- sudo nano /boot/cmdline.txt
+In file /boot/cmdline.txt add cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1 into the end of the file.
 - Select "System option"
 - Select "Boot Auto Login"
 - Select "Console"
 - Reboot
-
-- sudo nano /boot/cmdline.txt
-In file /boot/cmdline.txt add cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1 into the end of the file.
 
 Then install K3S:
 - curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644
@@ -44,11 +43,11 @@ Then install K3S:
 And that’s it! You have a Kubernetes cluster running! You can check it with the command:
 - kubectl get pods -A
 
+
 To install on worker nodes and add them to the cluster, run the installation script with the K3S_URL and K3S_TOKEN environment variables. Here is an example showing how to join a worker node:
 
 To get the token value use this command:
 sudo cat /var/lib/rancher/k3s/server/token
-
 
 curl -sfL https://get.k3s.io | K3S_URL=https://<server>:6443 K3S_TOKEN=<token> sh -
 
