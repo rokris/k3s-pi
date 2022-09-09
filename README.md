@@ -23,15 +23,15 @@ Enable SSH and WiFi.
 
 SSH into Raspberry Pi
 
-`$ sudo apt update && sudo apt upgrade -y`
-`$ sudo reboot`
-`$ nano ~/.bashrc`
+`$ sudo apt update && sudo apt upgrade -y`\
+`$ sudo reboot`\
+`$ nano ~/.bashrc`\
 
 Add following to the file:
 > alias ll='ls -alF'
 
-`$ sudo apt install avahi-daemon git -y`
-`$ sudo nano /boot/cmdline.txt`
+`$ sudo apt install avahi-daemon git -y`\
+`$ sudo nano /boot/cmdline.txt`\
 
 Add following to the end of the file:
 
