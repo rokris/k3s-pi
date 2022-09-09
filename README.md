@@ -25,13 +25,13 @@ SSH into Raspberry Pi
 
 `$ sudo apt update && sudo apt upgrade -y`\
 `$ sudo reboot`\
-`$ nano ~/.bashrc`\
+`$ nano ~/.bashrc`
 
 Add following to the file:
 > alias ll='ls -alF'
 
 `$ sudo apt install avahi-daemon git -y`\
-`$ sudo nano /boot/cmdline.txt`\
+`$ sudo nano /boot/cmdline.txt`
 
 Add following to the end of the file:
 
@@ -44,7 +44,7 @@ Turn off Autologin / Console
 > Select "System option"\
 > Select "Boot Auto Login"\
 > Select "Console"\
-> Reboot (Yes)\
+> Reboot (Yes)
 
 ---
 ## Prep for K3s:
@@ -52,16 +52,16 @@ Turn off Autologin / Console
 `$ sudo iptables -F`\
 `$ sudo update-alternatives --set iptables /usr/sbin/iptables-legacy`\
 `$ sudo update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy`\
-`$ sudo reboot`\
+`$ sudo reboot`
 
 ---
 
 ## Install K3S master node:
-`$ curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644`\
+`$ curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644`
 
 And that’s it! You have a Kubernetes cluster running! You can check it with the command:
 
-`$ kubectl get all -A`
+`$ kubectl get all -A`\
 `$ kubectl get pods -A`
 
 When all is created and look good...
