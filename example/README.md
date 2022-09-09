@@ -1,3 +1,5 @@
+# K3s deployment example
+
 First, I created an HTML file to be stored as a ConfigMap. Create a file named index.html with the following contents:
 
     <html>
