@@ -38,7 +38,6 @@ Turn off Autologin / Console
 
 Then install K3S:
 - curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644
-
 - sudo reboot
 
 And that’s it! You have a Kubernetes cluster running! You can check it with the command:
@@ -55,3 +54,6 @@ curl -sfL https://get.k3s.io | K3S_URL=https://<server>:6443 K3S_TOKEN=<token> s
 K3s config information for Remote clients is stored at master node.
 - sudo cat /etc/racher/k3s/k3s.yaml
 
+Uninstall K3s
+On K3s master node run:
+- /usr/local/bin/k3s-uninstall.sh
