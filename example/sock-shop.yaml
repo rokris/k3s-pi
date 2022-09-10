@@ -4,6 +4,24 @@ kind: Namespace
 metadata:
   name: sock-shop
 ---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: sock-shop
+  annotations:
+    kubernetes.io/ingress.class: "traefik"
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: front-end
+            port:
+              number: 80
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
