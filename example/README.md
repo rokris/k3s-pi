@@ -15,7 +15,7 @@ Create a ConfigMap with the HTML from the file you just created:
 
 Then deploy the Nginx container deployment, Service, and Traefik Ingress resources with:
 
-`$ kubectl apply -f hello-world.yml`
+`$ kubectl apply -f hello-world.yaml`
 
 After a few seconds, you should be able to access port 80 on any member nodes (assuming networking is working), and get back:
 
