@@ -24,6 +24,7 @@ Enable SSH and WiFi.
 SSH into Raspberry Pi
 
 `$ sudo apt update && sudo apt upgrade -y`<br>
+`$ sudo apt update && sudo apt full-upgrade -y`<br>
 `$ sudo reboot`<br>
 `$ nano ~/.bashrc`
 
@@ -57,7 +58,8 @@ Turn off Autologin / Console
 ---
 
 ## Install K3S master node:
-`$ curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644`
+`$ curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644`<br>
+`$ curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644 --disable=traefik`
 
 And that’s it! You have a Kubernetes cluster running! You can check it with the command:
 
