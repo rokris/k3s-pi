@@ -23,24 +23,27 @@ Enable SSH and WiFi.
 
 SSH into Raspberry Pi
 
-`$ sudo apt update && sudo apt upgrade -y`<br>
-`$ sudo apt update && sudo apt full-upgrade -y`<br>
-`$ sudo reboot`<br>
-`$ nano ~/.bashrc`
+Update and Upgrade the Raspberry PI OS.
 
-Add following to the file:
-> alias ll='ls -alF'
+`$ sudo apt update && sudo apt full-upgrade -y`<br>
+`$ sudo reboot`
+
+Optional: Install extra helpfull tools and settings.
 
 `$ sudo apt install avahi-daemon git -y`<br>
-`$ sudo nano /boot/cmdline.txt`
+`$ nano ~/.bashrc`
 
-Disable swap file usage by changing the parameter.
+> Add -> alias ll='ls -alF'
 
-> sudo nano /etc/dphys-swapfile
+Disable swap file usage by changing the parameter in file.
 
-CONF_SWAPSIZE=0
+`$ sudo nano /etc/dphys-swapfile`
+
+> CONF_SWAPSIZE=0
 
 Add following to the end of the file:
+
+`$ sudo nano /boot/cmdline.txt`
 
 > cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1
 
