@@ -67,8 +67,7 @@ Turn off Autologin / Console
 ---
 
 ## Install K3S master node:
-`$ curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644`<br>
-`$ curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644 --disable=traefik`
+`$ curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644`
 
 And that’s it! You have a Kubernetes cluster running! You can check it with the command:
 
