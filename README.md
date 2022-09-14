@@ -34,6 +34,12 @@ Add following to the file:
 `$ sudo apt install avahi-daemon git -y`<br>
 `$ sudo nano /boot/cmdline.txt`
 
+Disable swap file usage by changing the parameter.
+
+> sudo nano /etc/dphys-swapfile
+
+CONF_SWAPSIZE=0
+
 Add following to the end of the file:
 
 > cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1
