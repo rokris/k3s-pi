@@ -41,7 +41,7 @@ Disable swap file usage by changing the parameter in file.
 
 > CONF_SWAPSIZE=0
 
-Add following to the end of the file:
+Add following to the end of the line:
 
 `$ sudo nano /boot/cmdline.txt`
 
