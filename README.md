@@ -84,9 +84,11 @@ When all is created and look good...
 
 To install on worker nodes and add them to the cluster, run the installation script with the K3S_URL and K3S_TOKEN environment variables. Here is an example showing how to join a worker node:
 
-To get the token value use this command:
+To get the token value use this command on the master:
 
 `$ sudo cat /var/lib/rancher/k3s/server/token`
+
+On worker, run command to install K3s
 
 `$ curl -sfL https://get.k3s.io | K3S_URL=https://<server>:6443 K3S_TOKEN=<token> sh -`
   
